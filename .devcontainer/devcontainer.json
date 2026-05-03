@@ -1,0 +1,17 @@
+{
+    "name": "Java & Kotlin",
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "jetbrains.kotlin-lsp-vscode",  // Official JetBrains Kotlin LSP
+                "jetbrains.java-to-kotlin-vsc"  // JetBrains Java-to-Kotlin converter
+            ]
+        }
+    },
+    "containerEnv": {
+        "_JAVA_OPTIONS": "-XX:+UnlockExperimentalVMOptions -XX:+UseCompactObjectHeaders -XX:+TieredCompilation"
+    }
+}
