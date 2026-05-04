@@ -19,7 +19,7 @@ import dev.brahmkshatriya.echo.common.settings.Settings
  * }
  * ```
  */
-abstract class ExtensionBase : ExtensionClient {
+abstract class MyExtensionBase : ExtensionClient {
 
     private var _settings: Settings? = null
 

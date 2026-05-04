@@ -27,15 +27,15 @@ A starting point for building **Echo** extensions.
 echo-extension-template/
 ├── common/ # Shared code
 │   └── src/main/kotlin/…/
-│       └── ExtensionBase.kt # extend this on each platform
+│       └── MyExtensionBase.kt # extend this on each platform
 │
 ├── android/
 │   └── src/main/kotlin/…/
-│       └── MyExtension.kt # android specific implementation
+│       └── MyExtensionAndroid.kt # android specific implementation
 │
 ├── desktop/
 │   └── src/main/kotlin/…/
-│       └── MyExtension.kt # desktop specific implementation
+│       └── MyExtensionDesktop.kt # desktop specific implementation
 │
 ├── buildSrc/
 │   └── src/main/kotlin/
@@ -149,19 +149,19 @@ All extension metadata lives in `gradle.properties`.
 
 Pure Kotlin/JVM code shared between Android and Desktop.
 
-- **`ExtensionBase`** — implements `ExtensionClient` and handles the `Settings` injection lifecycle. Both platform `MyExtension` classes extend this, so neither has to repeat the boilerplate. Subclasses access settings via the `protected val settings` property inside `onInitialize` and beyond.
+- **`MyExtensionBase`** — implements `ExtensionClient` and handles the `Settings` injection lifecycle. Both platform `MyExtension` classes extend this, so neither has to repeat the boilerplate. Subclasses access settings via the `protected val settings` property inside `onInitialize` and beyond.
 
 ### `android`
 
 Builds an APK sideloadable into Echo on Android.
 
-- Implement echo-common client interfaces directly on `MyExtension` (no imposed base class).
+- Implement echo-common client interfaces directly on `MyExtensionAndroid` (no imposed base class).
 
 ### `desktop`
 
 Builds a shadow JAR loadable into Echo Desktop.
 
-- Implement echo-common client interfaces directly on `MyExtension` (no imposed base class).
+- Implement echo-common client interfaces directly on `MyExtensionDesktop` (no imposed base class).
 - Published to Maven via the `maven-publish` plugin (JitPack-compatible).
 
 ---

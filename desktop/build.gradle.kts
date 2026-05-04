@@ -7,7 +7,7 @@ plugins {
 }
 
 // Change "MyExtension" to your extension's class name.
-val meta = extensionMetadata(extClassName = "MyExtension")
+val meta = extensionMetadata(extClassName = "MyExtensionDesktop")
 
 dependencies {
     implementation(project(":common"))
