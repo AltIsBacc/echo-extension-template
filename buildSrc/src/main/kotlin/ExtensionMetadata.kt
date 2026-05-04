@@ -15,14 +15,12 @@ data class ExtensionMetadata(
     val updateUrl: String,
 )
 
-fun Project.extensionMetadata(extClassName: String? = null) = ExtensionMetadata(
+fun Project.extensionMetadata(extClassName: String) = ExtensionMetadata(
     id          = property("extId").toString(),
     type        = property("extType").toString(),
     name        = property("extName").toString(),
     author      = property("extAuthor").toString(),
-    className   = extClassName
-        ?: runCatching { property("extClass").toString() }.getOrNull()
-        ?: error("No extClassName provided and extClass property is not set"),
+    className   = extClassName,
     verCode     = property("verCode").toString().toInt(),
     verName     = property("verName").toString(),
     iconUrl     = property("extIconUrl").toString(),
