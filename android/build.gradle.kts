@@ -9,7 +9,6 @@ val proguardTask = generateProguardRules(meta)
 
 dependencies {
     implementation(project(":common"))
-    implementation(libs.smart.exception.java)
 }
 
 android {
