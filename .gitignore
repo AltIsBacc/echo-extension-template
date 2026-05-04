@@ -19,10 +19,6 @@ Thumbs.db
 *.aab
 *.ap_
 *.dex
-/android/libs/*.aar
-
-# Keep the bundled aar if you ship one in-tree:
-# !android/libs/ffmpeg-kit.aar
 
 # ─── Desktop / JVM ────────────────────────────────
 *.jar
@@ -31,6 +27,7 @@ Thumbs.db
 # ─── Kotlin / Java ────────────────────────────────
 *.class
 *.kotlin_module
+.kotlin/
 
 # ─── Secrets / Keys ───────────────────────────────
 *.keystore
