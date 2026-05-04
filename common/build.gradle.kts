@@ -5,7 +5,6 @@ plugins {
 }
 
 dependencies {
-    implementation(libs.echo.common)
-    implementation(libs.kotlin.stdlib)
-    implementation(libs.org.json)
+    api(libs.echo.common)
+    api(libs.kotlin.stdlib)
 }

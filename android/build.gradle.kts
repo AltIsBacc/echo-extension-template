@@ -8,14 +8,8 @@ val meta = extensionMetadata(extClassName = "MyExtension")
 val proguardTask = generateProguardRules(meta)
 
 dependencies {
-    compileOnly(libs.echo.common)
-    compileOnly(libs.kotlin.stdlib)
-
     implementation(project(":common"))
     implementation(libs.smart.exception.java)
-
-    // Uncomment if you need FFmpeg (also add the .aar to android/libs/):
-    // implementation(files("libs/ffmpeg-kit.aar"))
 }
 
 android {
