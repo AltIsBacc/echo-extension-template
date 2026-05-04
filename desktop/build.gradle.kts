@@ -6,7 +6,8 @@ plugins {
     id("ext-convention")
 }
 
-val meta = extensionMetadata(extClassName = "DesktopEDLExtension")
+// Change "MyExtension" to your extension's class name.
+val meta = extensionMetadata(extClassName = "MyExtension")
 
 dependencies {
     implementation(project(":common"))
@@ -15,9 +16,9 @@ dependencies {
 publishing {
     publications {
         create<MavenPublication>("mavenJava") {
-            groupId = "dev.brahmkshatriya.echo.extension"
+            groupId    = "dev.brahmkshatriya.echo.extension"
             artifactId = meta.id
-            version = meta.verName
+            version    = meta.verName
             from(components["java"])
         }
     }

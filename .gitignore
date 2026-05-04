@@ -1,11 +1,38 @@
-*.iml
-.gradle
-.idea
-.DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
+# ─── Gradle ───────────────────────────────────────
+.gradle/
+build/
+**/build/
+out/
 local.properties
-.androidide
-.kotlin
+gradle.properties.local
+
+# ─── IDE ──────────────────────────────────────────
+.idea/
+*.iml
+*.iws
+*.ipr
+.DS_Store
+Thumbs.db
+
+# ─── Android ──────────────────────────────────────
+*.apk
+*.aab
+*.ap_
+*.dex
+/android/libs/*.aar
+
+# Keep the bundled aar if you ship one in-tree:
+# !android/libs/ffmpeg-kit.aar
+
+# ─── Desktop / JVM ────────────────────────────────
+*.jar
+!gradle/wrapper/gradle-wrapper.jar
+
+# ─── Kotlin / Java ────────────────────────────────
+*.class
+*.kotlin_module
+
+# ─── Secrets / Keys ───────────────────────────────
+*.keystore
+*.jks
+key.properties

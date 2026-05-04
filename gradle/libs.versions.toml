@@ -1,13 +1,13 @@
 [versions]
-kotlin          = "2.3.20"
-agp             = "9.1.0"
+kotlin          = "2.2.10"
+agp             = "8.12.1"
 shadow          = "9.4.1"
 smart-exception = "0.2.1"
-echo-lib        = "1.0"
+echoCommon      = "1.0"
 org-json        = "20251224"
 
 [libraries]
-echo-common          = { module = "dev.brahmkshatriya.echo:common", version.ref = "echo-lib" }
+echo-common          = { module = "dev.brahmkshatriya.echo:common", version.ref = "echoCommon" }
 kotlin-stdlib        = { module = "org.jetbrains.kotlin:kotlin-stdlib" }
 smart-exception-java = { module = "com.arthenica:smart-exception-java", version.ref = "smart-exception" }
 agp                  = { module = "com.android.tools.build:gradle", version.ref = "agp" }
