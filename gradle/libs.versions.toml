@@ -1,14 +1,14 @@
 [versions]
 kotlin          = "2.2.10"
-agp             = "8.12.1"
+android         = "8.12.1"
 shadow          = "9.4.1"
 echoCommon      = "1.0"
 
 [libraries]
-echo-common          = { module = "dev.brahmkshatriya.echo:common", version.ref = "echoCommon" }
-kotlin-stdlib        = { module = "org.jetbrains.kotlin:kotlin-stdlib" }
-agp                  = { module = "com.android.tools.build:gradle", version.ref = "agp" }
-kotlin-gradle-plugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+echo-common           = { module = "dev.brahmkshatriya.echo:common", version.ref = "echoCommon" }
+kotlin-stdlib         = { module = "org.jetbrains.kotlin:kotlin-stdlib" }
+android-gradle-plugin = { module = "com.android.tools.build:gradle", version.ref = "android" }
+kotlin-gradle-plugin  = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 
 [plugins]
 shadow = { id = "com.gradleup.shadow", version.ref = "shadow" }

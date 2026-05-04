@@ -22,6 +22,6 @@ tasks.withType<KotlinCompile>().configureEach {
 }
 
 dependencies {
-    implementation(libs.agp)
+    implementation(libs.android.gradle.plugin)
     implementation(libs.kotlin.gradle.plugin)
 }
