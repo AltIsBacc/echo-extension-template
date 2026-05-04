@@ -47,7 +47,7 @@ android {
             isMinifyEnabled = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
-                layout.buildDirectory.file("generated/proguard/generated-rules.pro").get().asFile.path
+                proguardTask.flatMap { it.outputFile }.get().asFile
             )
         }
 
