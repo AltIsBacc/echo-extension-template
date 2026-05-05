@@ -37,7 +37,7 @@ echo-extension-template/
 │   └── src/main/kotlin/…/
 │       └── MyExtensionDesktop.kt # desktop specific implementation
 │
-├── buildSrc/
+├── build-logic/
 │   └── src/main/kotlin/
 │       ├── ExtensionMetadata.kt
 │       ├── ProguardUtils.kt
