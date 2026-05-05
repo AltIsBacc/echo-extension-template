@@ -5,6 +5,6 @@ plugins {
 }
 
 dependencies {
-    api(libs.echo.common)
-    api(libs.kotlin.stdlib)
+    compileOnlyApi(libs.echo.common)
+    compileOnlyApi(libs.kotlin.stdlib)
 }
