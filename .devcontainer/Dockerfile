@@ -1,6 +1,6 @@
 FROM mcr.microsoft.com/devcontainers/base:debian
 
-ARG JAVA_VERSION=25.0.2
+ARG JAVA_VERSION=21.0.11-tem
 ARG CMDLINE_TOOLS_VERSION=14742923
 
 ENV ANDROID_SDK_ROOT=/opt/android-sdk
@@ -18,7 +18,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 RUN curl -fsSL "https://get.sdkman.io" | bash \
     && source "${SDKMAN_DIR}/bin/sdkman-init.sh" \
-    && sdk install java ${JAVA_VERSION}-tem \
+    && sdk install java ${JAVA_VERSION} \
     && sdk flush tmp
 
 ENV PATH="${SDKMAN_DIR}/candidates/java/current/bin:${ANDROID_SDK_ROOT}/cmdline-tools/latest/bin:${PATH}"
