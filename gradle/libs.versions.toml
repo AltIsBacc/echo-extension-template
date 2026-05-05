@@ -11,4 +11,7 @@ android-gradle-plugin = { module = "com.android.tools.build:gradle", version.ref
 kotlin-gradle-plugin  = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 
 [plugins]
-shadow = { id = "com.gradleup.shadow", version.ref = "shadow" }
+android-application = { id = "com.android.application", version.ref = "android" }
+android-library     = { id = "com.android.library",     version.ref = "android" }
+kotlin-jvm          = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+shadow              = { id = "com.gradleup.shadow",       version.ref = "shadow" }

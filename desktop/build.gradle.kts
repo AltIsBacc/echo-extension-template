@@ -1,7 +1,7 @@
 plugins {
     alias(libs.plugins.shadow)
     id("java-library")
-    id("org.jetbrains.kotlin.jvm")
+    alias(libs.plugins.kotlin.jvm)
     id("maven-publish")
     id("ext-convention")
 }

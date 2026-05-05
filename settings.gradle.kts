@@ -1,4 +1,5 @@
 pluginManagement {
+    includeBuild("build-logic")
     repositories {
         google()
         mavenCentral()
@@ -12,7 +13,6 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
-        // JitPack — needed if you consume libraries hosted there
         maven { url = uri("https://jitpack.io") }
     }
 }
@@ -24,3 +24,10 @@ rootProject.name = extName
 include(":common")
 include(":android")
 include(":desktop")
+
+check(JavaVersion.current().isCompatibleWith(JavaVersion.VERSION_17)) {
+    """
+    This template requires JDK 17+ but it is currently using JDK ${JavaVersion.current()}.
+    Java Home: [${System.getProperty("java.home")}]
+    """.trimIndent()
+}
